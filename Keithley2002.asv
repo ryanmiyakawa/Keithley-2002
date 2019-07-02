@@ -1,0 +1,38 @@
+classdef Keithley2002 < handle
+    %might have to initiate twice
+    
+%% Properties
+
+properties (Constant)
+    cIPadress = '192.168.1.111' % this is always the same
+    cJARPath = './java-assets/jGpibEnet-1.0-all.jar'
+end
+
+properties
+    
+end
+
+
+properties (Access = private)
+
+end
+
+
+
+%%
+methods
+    %% Constructor
+    function this = Keithley2002()
+        this.init()
+    end
+    
+    
+    function init(this)
+        javaaddpath(this.cJARPath)
+    end
+
+
+
+end
+
+end
